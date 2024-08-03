@@ -8,28 +8,8 @@ import seaborn as sns
 
 
 
-# # Define the path to your fonts
-# text_font_path = 'DejaVuSans.ttf'
-# emoji_font_path = 'NotoEmoji-VariableFont_wght.ttf'
-
-# # Load the fonts
-# text_font = FontProperties(fname=text_font_path)
-# emoji_font = FontProperties(fname=emoji_font_path)
-
-# # Set the default font to the text font
-# plt.rcParams['font.family'] = text_font.get_name()
-
-# # Create a pie chart
-# # fig, ax = plt.subplots(figsize=(10,6))
-# # ax.pie([10, 20, 30], labels=['A', 'B', 'C'], autopct='%1.1f%%', textprops={'fontproperties': emoji_font})
-# # plt.show()
-
-# # Load the DejaVu Sans format
-# # font_manager.fontManager.addfont('C:/Users/sunil/Desktop/RHYTHM DOCS/WhatsApp Chat Analysis/dejavu-sans-ttf-2.37/ttf/DejaVuSans.ttf')
-# # plt.rcParams['font.family'] = 'DejaVu Sans'
-
 # Load the Noto Emoji font
-emoji_font_path = "C:/Users/sunil/Desktop/RHYTHM DOCS/WhatsApp Chat Analysis/Noto_Emoji/NotoEmoji-VariableFont_wght.ttf"
+emoji_font_path = "C:/Users/sunil/Desktop/RHYTHM DOCS/WhatsApp Chat Analysis/Whatsapp-Chat-Sentiments-Analysis/Noto_Emoji/NotoEmoji-VariableFont_wght.ttf"
 emoji_font = FontProperties(fname=emoji_font_path)
 
 st.sidebar.title("Whatsapp Chat Analyzer")
