@@ -12,7 +12,7 @@ import seaborn as sns
 emoji_font_path = "C:/Users/sunil/Desktop/RHYTHM DOCS/WhatsApp Chat Analysis/Whatsapp-Chat-Sentiments-Analysis/Noto_Emoji/NotoEmoji-VariableFont_wght.ttf"
 emoji_font = FontProperties(fname=emoji_font_path)
 
-st.sidebar.title("Whatsapp Chat Analyzer")
+st.sidebar.title("Whatsapp Chat Sentiments Analysis")
 uploaded_file = st.sidebar.file_uploader("Choose a file")
 if uploaded_file is not None:
     # To read file as bytes:

@@ -157,7 +157,7 @@ def monthly_timeline(selected_user,df):
 # daily timeline
 def daily_timeline(selected_user,df):
     if selected_user != "Overall":
-        df[df['users']] == selected_user
+        df[df['users'] == selected_user]
     daily_timeline = df.groupby('only_date').count()['message'].reset_index()
     
     return daily_timeline
@@ -165,20 +165,20 @@ def daily_timeline(selected_user,df):
 # week activity analysis
 def week_activity_analysis(selected_user,df):
     if selected_user !="Overall":
-        df[df['users']]==selected_user
+        df[df['users'] ==selected_user]
     return df['day_name'].value_counts()
 
 # month activity analysis
 def month_activity_analysis(selected_user,df):
     if selected_user != "Overall":
-        df[df["users"]] == selected_user
+        df[df["users"] == selected_user]
     
     return df['month'].value_counts()
 
 # heat map 
 def activity_heatmap(selected_user,df):
     if selected_user != "Overall":
-        df[df["users"]] == selected_user
+        df[df["users"] == selected_user]
     user_heatmap = df.pivot_table(index='day_name',columns='period',values='message',aggfunc='count').fillna(0)
     return user_heatmap
          
