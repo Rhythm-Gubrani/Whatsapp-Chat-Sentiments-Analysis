@@ -1,6 +1,6 @@
 # Whatsapp-Chat-Sentiments-Analysis
 This project leverages Streamlit for an interactive WhatsApp chat sentiment analysis tool. It processes chat data to visualize key statistics, including message counts, media shares, and emojis. It generates insightful graphs and heatmaps, enhancing user experience with real-time data insights and intuitive visualizations.
-
+### Live Site - https://mood-mapper.streamlit.app/
 ## Installation Process
 
 1. **Clone the repository**  
@@ -12,13 +12,16 @@ This project leverages Streamlit for an interactive WhatsApp chat sentiment anal
    ```bash
    cd Whatsapp-Chat-Sentiments-Analysis
    ```
-
-3. **Run the Streamlit app**  
+3. **Install all Requirment python Library**
+  ```bash
+   pip insall requirments.txt
+   ```
+4. **Run the Streamlit app**  
    ```bash
    streamlit run app.py
    ```
 
-4. **Choose the WhatsApp chat text file**  
+5. **Choose the WhatsApp chat text file**  
    Go to a particular chat on WhatsApp, click on the menu bar, then select "Export chat" to export the chat as a `.txt` file. Upload this file in the app interface to start the analysis.
 
 ## About
