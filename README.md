@@ -13,7 +13,7 @@ This project leverages Streamlit for an interactive WhatsApp chat sentiment anal
    cd Whatsapp-Chat-Sentiments-Analysis
    ```
 3. **Install all Requirment python Library**
-  ```bash
+   ```bash
    pip insall requirments.txt
    ```
 4. **Run the Streamlit app**  
