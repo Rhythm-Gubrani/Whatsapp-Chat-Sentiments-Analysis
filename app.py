@@ -1,6 +1,6 @@
 import streamlit as st
 import preprocessor,helper
-
+import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 from matplotlib import font_manager
@@ -58,7 +58,8 @@ if uploaded_file is not None:
             st.subheader(num_emoticons)
         
         # monthly timeline
-        st.title("MOnthly Timeline")
+
+        st.title("Monthly Timeline")
         timeline = helper.monthly_timeline(selected_users,df)
         fig,ax = plt.subplots()
         plt.plot(timeline['time'],timeline['message'],color="green")
