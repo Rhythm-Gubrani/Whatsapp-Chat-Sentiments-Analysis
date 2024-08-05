@@ -9,7 +9,7 @@ import seaborn as sns
 
 
 # Load the Noto Emoji font
-emoji_font_path = "C:/Users/sunil/Desktop/RHYTHM DOCS/WhatsApp Chat Analysis/Whatsapp-Chat-Sentiments-Analysis/Noto_Emoji/NotoEmoji-VariableFont_wght.ttf"
+emoji_font_path = "Noto_Emoji/NotoEmoji-VariableFont_wght.ttf"
 emoji_font = FontProperties(fname=emoji_font_path)
 
 st.sidebar.title("Whatsapp Chat Sentiments Analysis")
