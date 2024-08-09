@@ -69,14 +69,22 @@ def preprocess(data):
     dates = re.findall(pattern, data)
 
     # Convert the message date data type
+    # def parse_date(date_str):
+    #     # Try parsing in multiple formats to accommodate different time representations
+    #     for fmt in ('%d/%m/%Y, %I:%M %p - ', '%d/%m/%Y, %H:%M - ', '%m/%d/%y, %I:%M %p - ', '%m/%d/%y, %H:%M - '):
+    #         try:
+    #             return datetime.strptime(date_str, fmt)
+    #         except ValueError:
+    #             continue
+    #     raise ValueError(f"Date format not recognized: {date_str}")
+    from dateutil import parser
+
     def parse_date(date_str):
-        # Try parsing in multiple formats to accommodate different time representations
-        for fmt in ('%d/%m/%Y, %I:%M %p - ', '%d/%m/%Y, %H:%M - ', '%m/%d/%y, %I:%M %p - ', '%m/%d/%y, %H:%M - '):
-            try:
-                return datetime.strptime(date_str, fmt)
-            except ValueError:
-                continue
-        raise ValueError(f"Date format not recognized: {date_str}")
+        try:
+            # Attempt to parse date assuming it's in a recognized format
+            return parser.parse(date_str.split(' - ')[0])
+        except (parser.ParserError, ValueError):
+            raise ValueError(f"Date format not recognized: {date_str}")
 
     # Create dataframe
     df = pd.DataFrame({'user_message': messages, 'message_date': dates})
